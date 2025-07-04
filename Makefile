@@ -55,6 +55,3 @@ create-module:
 
 update:
 	$(ODOO) -c $(CONFIG) -d $(DB_NAME) -u all --stop-after-init
-
-# Relic Lice key: ae6a2b7998fe25cb3b8e614d5a13b21bFFFFNRAL
-#  user: NRAK-2IF5V4DA82G1NVC4YNQQHY18L6T
