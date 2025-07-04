@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Email template for notifying admins about new access requests -->
+    <record id="email_template_access_request_notification" model="mail.template">
+        <field name="name">Access Request - Admin Notification</field>
+        <field name="model_id" ref="model_access_request"/>
+        <field name="subject">New Access Request from ${object.user_id.name}</field>
+        <field name="email_to">${ctx.get('recipient_user').email if ctx.get('recipient_user') else ''}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>Hello ${ctx.get('recipient_user').name if ctx.get('recipient_user') else 'Administrator'},</p>
+                
+                <p>A new access request has been submitted that requires your approval:</p>
+                
+                <table style="border-collapse: collapse; border: 1px solid #ccc; width: 100%; margin: 10px 0;">
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Requesting User:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.user_id.name}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Model:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.model_display_name or object.model_name}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Action:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.action_type.title()}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Rejected by:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.approver_id.name}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Rejection Date:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.approval_date}</td>
+                    </tr>
+                    % if object.rejection_reason:
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Reason:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.rejection_reason}</td>
+                    </tr>
+                    % endif
+                </table>
+                
+                <p>If you believe this rejection was made in error, please contact your administrator for clarification.</p>
+                
+                <p>Best regards,<br/>Odoo System</p>
+            </div>
+        </field>
+    </record>
+</odoo> object.model_name}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Action:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.action_type.title()}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Priority:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.priority.title()}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Reason:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.reason}</td>
+                    </tr>
+                    % if object.justification:
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Justification:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.justification}</td>
+                    </tr>
+                    % endif
+                </table>
+                
+                <p>
+                    <a href="${object.get_portal_url()}" style="background-color: #007bff; color: white; padding: 10px 15px; text-decoration: none; border-radius: 5px;">
+                        Review Request
+                    </a>
+                </p>
+                
+                <p>Best regards,<br/>Odoo System</p>
+            </div>
+        </field>
+    </record>
+
+    <!-- Email template for notifying users about approval -->
+    <record id="email_template_access_request_approved" model="mail.template">
+        <field name="name">Access Request - Approved</field>
+        <field name="model_id" ref="model_access_request"/>
+        <field name="subject">Your Access Request has been Approved</field>
+        <field name="email_to">${object.user_id.email}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>Hello ${object.user_id.name},</p>
+                
+                <p style="color: green;"><strong>Good news! Your access request has been approved.</strong></p>
+                
+                <table style="border-collapse: collapse; border: 1px solid #ccc; width: 100%; margin: 10px 0;">
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Model:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.model_display_name or object.model_name}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Action:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.action_type.title()}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Approved by:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.approver_id.name}</td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Approval Date:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.approval_date}</td>
+                    </tr>
+                    % if object.temporary_access and object.access_expires_at:
+                    <tr style="background-color: #fff3cd;">
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #fff3cd;"><strong>Access Expires:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #fff3cd;">${object.access_expires_at}</td>
+                    </tr>
+                    % endif
+                </table>
+                
+                % if object.temporary_access and object.access_expires_at:
+                <p style="background-color: #fff3cd; padding: 10px; border-left: 4px solid #ffc107;">
+                    <strong>Note:</strong> This is temporary access that will expire on ${object.access_expires_at}.
+                </p>
+                % endif
+                
+                <p>You can now perform the requested action. If you encounter any issues, please contact your administrator.</p>
+                
+                <p>Best regards,<br/>Odoo System</p>
+            </div>
+        </field>
+    </record>
+
+    <!-- Email template for notifying users about rejection -->
+    <record id="email_template_access_request_rejected" model="mail.template">
+        <field name="name">Access Request - Rejected</field>
+        <field name="model_id" ref="model_access_request"/>
+        <field name="subject">Your Access Request has been Rejected</field>
+        <field name="email_to">${object.user_id.email}</field>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p>Hello ${object.user_id.name},</p>
+                
+                <p style="color: #dc3545;"><strong>Your access request has been rejected.</strong></p>
+                
+                <table style="border-collapse: collapse; border: 1px solid #ccc; width: 100%; margin: 10px 0;">
+                    <tr>
+                        <td style="border: 1px solid #ccc; padding: 8px; background-color: #f5f5f5;"><strong>Model:</strong></td>
+                        <td style="border: 1px solid #ccc; padding: 8px;">${object.model_display_name or object.model_name}</td>
+                    </tr>
+
+                    

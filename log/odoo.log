@@ -1,0 +1,771 @@
+Exception in thread odoo.service.cron.cron0:
+Traceback (most recent call last):
+  File "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+Forced shutdown.
+-02 19:47:18,142 24608 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-07-02 19:47:18,142 24608 DEBUG ? odoo.netsvc: logger level set: "odoo:DEBUG" 
+2025-07-02 19:47:18,142 24608 DEBUG ? odoo.netsvc: logger level set: "odoo.sql_db:INFO" 
+2025-07-02 19:47:18,142 24608 DEBUG ? odoo.netsvc: logger level set: ":INFO" 
+2025-07-02 19:47:18,142 24608 INFO ? odoo: Odoo version 18.0 
+2025-07-02 19:47:18,142 24608 INFO ? odoo: Using configuration file at /Users/lawrence/Documents/odoo/odoo.conf 
+2025-07-02 19:47:18,143 24608 INFO ? odoo: addons paths: ['/Users/lawrence/Documents/odoo/odoo/odoo/addons', '/Users/lawrence/Library/Application Support/Odoo/addons/18.0', '/Users/lawrence/Documents/odoo/odoo/addons', '/Users/lawrence/Documents/odoo/custom_addons'] 
+2025-07-02 19:47:18,143 24608 INFO ? odoo: database: odoo@localhost:5432 
+2025-07-02 19:47:18,254 24608 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltopdf to print a pdf version of the reports. 
+2025-07-02 19:47:18,255 24608 INFO ? odoo.addons.base.models.ir_actions_report: You need Wkhtmltoimage to generate images from html. 
+2025-07-02 19:47:18,426 24608 DEBUG ? odoo.service.server: Setting signal handlers 
+2025-07-02 19:47:18,433 24608 INFO ? odoo.service.server: HTTP service (werkzeug) running on 1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa:8069 
+2025-07-02 19:47:18,435 24608 DEBUG ? odoo.service.server: cron0 started! 
+2025-07-02 19:47:18,435 24608 DEBUG ? odoo.service.server: cron1 started! 
+2025-07-02 19:48:18,476 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:48:19,503 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:48:34,803 24608 DEBUG ? odoo.http: HTTP sessions stored in: /Users/lawrence/Library/Application Support/Odoo/sessions 
+2025-07-02 19:48:34,820 24608 DEBUG ? odoo.modules.module: module __init__.py: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:48:34,820 24608 DEBUG ? odoo.modules.module: module __pycache__: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:48:34,849 24608 DEBUG ? odoo.modules.module: module l10n_es_pos_tbai: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:48:35,141 24608 DEBUG ? odoo.modules.module: module website_twitter: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:48:35,183 24608 WARNING ? odoo.modules.module: Missing `license` key in manifest for 'permission_request', defaulting to LGPL-3 
+2025-07-02 19:48:35,252 24608 DEBUG ? odoo.modules.registry: Multiprocess load registry signaling: [Registry: 14] [Cache default: 9] [Cache assets: 7] [Cache templates: 7] [Cache routing: 1] [Cache groups: 7] 
+2025-07-02 19:48:35,256 24608 INFO ? odoo.modules.loading: loading 1 modules... 
+2025-07-02 19:48:35,256 24608 DEBUG ? odoo.modules.loading: Loading module base (1/1) 
+2025-07-02 19:48:35,265 24608 DEBUG ? odoo.modules.loading: Module base loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,265 24608 INFO ? odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2025-07-02 19:48:35,281 24608 DEBUG ? odoo.modules.loading: Updating graph with 79 more modules 
+2025-07-02 19:48:35,281 24608 INFO ? odoo.modules.loading: loading 80 modules... 
+2025-07-02 19:48:35,281 24608 DEBUG ? odoo.modules.loading: Loading module social_media (2/80) 
+2025-07-02 19:48:35,283 24608 DEBUG ? odoo.modules.loading: Module social_media loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,284 24608 DEBUG ? odoo.modules.loading: Loading module test_performance (3/80) 
+2025-07-02 19:48:35,286 24608 DEBUG ? odoo.modules.loading: Module test_performance loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,286 24608 DEBUG ? odoo.modules.loading: Loading module uom (4/80) 
+2025-07-02 19:48:35,290 24608 DEBUG ? odoo.modules.loading: Module uom loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,290 24608 DEBUG ? odoo.modules.loading: Loading module web (5/80) 
+2025-07-02 19:48:35,291 24608 DEBUG ? odoo.modules.loading: Module web loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,291 24608 DEBUG ? odoo.modules.loading: Loading module auth_totp (6/80) 
+2025-07-02 19:48:35,307 24608 DEBUG ? odoo.modules.loading: Module auth_totp loaded in 0.02s, 0 queries 
+2025-07-02 19:48:35,307 24608 DEBUG ? odoo.modules.loading: Loading module base_import (7/80) 
+2025-07-02 19:48:35,421 24608 DEBUG ? odoo.modules.loading: Module base_import loaded in 0.11s, 0 queries 
+2025-07-02 19:48:35,422 24608 DEBUG ? odoo.modules.loading: Loading module base_import_module (8/80) 
+2025-07-02 19:48:35,426 24608 DEBUG ? odoo.modules.loading: Module base_import_module loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,426 24608 DEBUG ? odoo.modules.loading: Loading module base_setup (9/80) 
+2025-07-02 19:48:35,429 24608 DEBUG ? odoo.modules.loading: Module base_setup loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,429 24608 DEBUG ? odoo.modules.loading: Loading module bus (10/80) 
+2025-07-02 19:48:35,439 24608 DEBUG ? odoo.modules.loading: Module bus loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,439 24608 DEBUG ? odoo.modules.loading: Loading module http_routing (11/80) 
+2025-07-02 19:48:35,443 24608 DEBUG ? odoo.modules.loading: Module http_routing loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,443 24608 DEBUG ? odoo.modules.loading: Loading module onboarding (12/80) 
+2025-07-02 19:48:35,446 24608 DEBUG ? odoo.modules.loading: Module onboarding loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,446 24608 DEBUG ? odoo.modules.loading: Loading module resource (13/80) 
+2025-07-02 19:48:35,455 24608 DEBUG ? odoo.modules.loading: Module resource loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,456 24608 DEBUG ? odoo.modules.loading: Loading module utm (14/80) 
+2025-07-02 19:48:35,459 24608 DEBUG ? odoo.modules.loading: Module utm loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,459 24608 DEBUG ? odoo.modules.loading: Loading module web_tour (15/80) 
+2025-07-02 19:48:35,462 24608 DEBUG ? odoo.modules.loading: Module web_tour loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,462 24608 DEBUG ? odoo.modules.loading: Loading module google_recaptcha (16/80) 
+2025-07-02 19:48:35,463 24608 DEBUG ? odoo.modules.loading: Module google_recaptcha loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,463 24608 DEBUG ? odoo.modules.loading: Loading module html_editor (17/80) 
+2025-07-02 19:48:35,530 24608 DEBUG ? odoo.modules.loading: Module html_editor loaded in 0.07s, 0 queries 
+2025-07-02 19:48:35,530 24608 DEBUG ? odoo.modules.loading: Loading module iap (18/80) 
+2025-07-02 19:48:35,530 24608 DEBUG ? odoo.modules.loading: Module iap loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,530 24608 DEBUG ? odoo.modules.loading: Loading module mail (19/80) 
+2025-07-02 19:48:35,535 24608 DEBUG ? odoo.modules.loading: Module mail loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,535 24608 DEBUG ? odoo.modules.loading: Loading module web_editor (20/80) 
+2025-07-02 19:48:35,564 24608 DEBUG ? odoo.modules.loading: Module web_editor loaded in 0.03s, 0 queries 
+2025-07-02 19:48:35,564 24608 DEBUG ? odoo.modules.loading: Loading module analytic (21/80) 
+2025-07-02 19:48:35,569 24608 DEBUG ? odoo.modules.loading: Module analytic loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,569 24608 DEBUG ? odoo.modules.loading: Loading module auth_signup (22/80) 
+2025-07-02 19:48:35,572 24608 DEBUG ? odoo.modules.loading: Module auth_signup loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,572 24608 DEBUG ? odoo.modules.loading: Loading module auth_totp_mail (23/80) 
+2025-07-02 19:48:35,574 24608 DEBUG ? odoo.modules.loading: Module auth_totp_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,574 24608 DEBUG ? odoo.modules.loading: Loading module base_install_request (24/80) 
+2025-07-02 19:48:35,576 24608 DEBUG ? odoo.modules.loading: Module base_install_request loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,576 24608 DEBUG ? odoo.modules.loading: Loading module contacts (25/80) 
+2025-07-02 19:48:35,578 24608 DEBUG ? odoo.modules.loading: Module contacts loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,578 24608 DEBUG ? odoo.modules.loading: Loading module google_gmail (26/80) 
+2025-07-02 19:48:35,580 24608 DEBUG ? odoo.modules.loading: Module google_gmail loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,580 24608 DEBUG ? odoo.modules.loading: Loading module iap_mail (27/80) 
+2025-07-02 19:48:35,581 24608 DEBUG ? odoo.modules.loading: Module iap_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,581 24608 DEBUG ? odoo.modules.loading: Loading module link_tracker (28/80) 
+2025-07-02 19:48:35,586 24608 DEBUG ? odoo.modules.loading: Module link_tracker loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,586 24608 DEBUG ? odoo.modules.loading: Loading module mail_bot (29/80) 
+2025-07-02 19:48:35,589 24608 DEBUG ? odoo.modules.loading: Module mail_bot loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,589 24608 DEBUG ? odoo.modules.loading: Loading module phone_validation (30/80) 
+2025-07-02 19:48:35,595 24608 DEBUG ? odoo.modules.loading: Module phone_validation loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,595 24608 DEBUG ? odoo.modules.loading: Loading module privacy_lookup (31/80) 
+2025-07-02 19:48:35,598 24608 DEBUG ? odoo.modules.loading: Module privacy_lookup loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,598 24608 DEBUG ? odoo.modules.loading: Loading module product (32/80) 
+2025-07-02 19:48:35,617 24608 DEBUG ? odoo.modules.loading: Module product loaded in 0.02s, 0 queries 
+2025-07-02 19:48:35,617 24608 DEBUG ? odoo.modules.loading: Loading module rating (33/80) 
+2025-07-02 19:48:35,622 24608 DEBUG ? odoo.modules.loading: Module rating loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,622 24608 DEBUG ? odoo.modules.loading: Loading module resource_mail (34/80) 
+2025-07-02 19:48:35,623 24608 DEBUG ? odoo.modules.loading: Module resource_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,623 24608 DEBUG ? odoo.modules.loading: Loading module sales_team (35/80) 
+2025-07-02 19:48:35,626 24608 DEBUG ? odoo.modules.loading: Module sales_team loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,626 24608 DEBUG ? odoo.modules.loading: Loading module test_mail (36/80) 
+2025-07-02 19:48:35,636 24608 DEBUG ? odoo.modules.loading: Module test_mail loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,636 24608 DEBUG ? odoo.modules.loading: Loading module web_unsplash (37/80) 
+2025-07-02 19:48:35,640 24608 DEBUG ? odoo.modules.loading: Module web_unsplash loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,640 24608 DEBUG ? odoo.modules.loading: Loading module mail_plugin (38/80) 
+2025-07-02 19:48:35,643 24608 DEBUG ? odoo.modules.loading: Module mail_plugin loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,643 24608 DEBUG ? odoo.modules.loading: Loading module partner_autocomplete (39/80) 
+2025-07-02 19:48:35,648 24608 DEBUG ? odoo.modules.loading: Module partner_autocomplete loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,648 24608 DEBUG ? odoo.modules.loading: Loading module portal (40/80) 
+2025-07-02 19:48:35,655 24608 DEBUG ? odoo.modules.loading: Module portal loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,655 24608 DEBUG ? odoo.modules.loading: Loading module sms (41/80) 
+2025-07-02 19:48:35,669 24608 DEBUG ? odoo.modules.loading: Module sms loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,669 24608 DEBUG ? odoo.modules.loading: Loading module snailmail (42/80) 
+2025-07-02 19:48:35,676 24608 DEBUG ? odoo.modules.loading: Module snailmail loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,677 24608 DEBUG ? odoo.modules.loading: Loading module auth_totp_portal (43/80) 
+2025-07-02 19:48:35,678 24608 DEBUG ? odoo.modules.loading: Module auth_totp_portal loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,678 24608 DEBUG ? odoo.modules.loading: Loading module digest (44/80) 
+2025-07-02 19:48:35,726 24608 DEBUG ? odoo.modules.loading: Module digest loaded in 0.05s, 0 queries 
+2025-07-02 19:48:35,726 24608 DEBUG ? odoo.modules.loading: Loading module payment (45/80) 
+2025-07-02 19:48:35,740 24608 DEBUG ? odoo.modules.loading: Module payment loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,740 24608 DEBUG ? odoo.modules.loading: Loading module portal_rating (46/80) 
+2025-07-02 19:48:35,743 24608 DEBUG ? odoo.modules.loading: Module portal_rating loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,744 24608 DEBUG ? odoo.modules.loading: Loading module spreadsheet (47/80) 
+2025-07-02 19:48:35,747 24608 DEBUG ? odoo.modules.loading: Module spreadsheet loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,747 24608 DEBUG ? odoo.modules.loading: Loading module test_mail_sms (48/80) 
+2025-07-02 19:48:35,749 24608 DEBUG ? odoo.modules.loading: Module test_mail_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,749 24608 DEBUG ? odoo.modules.loading: Loading module account (49/80) 
+2025-07-02 19:48:35,816 24608 DEBUG ? odoo.modules.loading: Module account loaded in 0.07s, 0 queries 
+2025-07-02 19:48:35,816 24608 DEBUG ? odoo.modules.loading: Loading module mass_mailing (50/80) 
+2025-07-02 19:48:35,833 24608 DEBUG ? odoo.modules.loading: Module mass_mailing loaded in 0.02s, 0 queries 
+2025-07-02 19:48:35,833 24608 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard (51/80) 
+2025-07-02 19:48:35,836 24608 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,836 24608 DEBUG ? odoo.modules.loading: Loading module website (52/80) 
+2025-07-02 19:48:35,890 24608 DEBUG ? odoo.modules.loading: Module website loaded in 0.05s, 0 queries 
+2025-07-02 19:48:35,890 24608 DEBUG ? odoo.modules.loading: Loading module account_edi_ubl_cii (53/80) 
+2025-07-02 19:48:35,905 24608 DEBUG ? odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,905 24608 DEBUG ? odoo.modules.loading: Loading module account_payment (54/80) 
+2025-07-02 19:48:35,912 24608 DEBUG ? odoo.modules.loading: Module account_payment loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,912 24608 DEBUG ? odoo.modules.loading: Loading module l10n_ke (55/80) 
+2025-07-02 19:48:35,914 24608 DEBUG ? odoo.modules.loading: Module l10n_ke loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,914 24608 DEBUG ? odoo.modules.loading: Loading module mass_mailing_sms (56/80) 
+2025-07-02 19:48:35,920 24608 DEBUG ? odoo.modules.loading: Module mass_mailing_sms loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,920 24608 DEBUG ? odoo.modules.loading: Loading module mass_mailing_themes (57/80) 
+2025-07-02 19:48:35,920 24608 DEBUG ? odoo.modules.loading: Module mass_mailing_themes loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,921 24608 DEBUG ? odoo.modules.loading: Loading module snailmail_account (58/80) 
+2025-07-02 19:48:35,923 24608 DEBUG ? odoo.modules.loading: Module snailmail_account loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,923 24608 DEBUG ? odoo.modules.loading: Loading module spreadsheet_account (59/80) 
+2025-07-02 19:48:35,925 24608 DEBUG ? odoo.modules.loading: Module spreadsheet_account loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,925 24608 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_account (60/80) 
+2025-07-02 19:48:35,925 24608 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,925 24608 DEBUG ? odoo.modules.loading: Loading module website_links (61/80) 
+2025-07-02 19:48:35,927 24608 DEBUG ? odoo.modules.loading: Module website_links loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,927 24608 DEBUG ? odoo.modules.loading: Loading module website_mail (62/80) 
+2025-07-02 19:48:35,929 24608 DEBUG ? odoo.modules.loading: Module website_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,929 24608 DEBUG ? odoo.modules.loading: Loading module website_mass_mailing (63/80) 
+2025-07-02 19:48:35,931 24608 DEBUG ? odoo.modules.loading: Module website_mass_mailing loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,931 24608 DEBUG ? odoo.modules.loading: Loading module website_sms (64/80) 
+2025-07-02 19:48:35,932 24608 DEBUG ? odoo.modules.loading: Module website_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,932 24608 DEBUG ? odoo.modules.loading: Loading module sale (65/80) 
+2025-07-02 19:48:35,952 24608 DEBUG ? odoo.modules.loading: Module sale loaded in 0.02s, 0 queries 
+2025-07-02 19:48:35,952 24608 DEBUG ? odoo.modules.loading: Loading module test_mass_mailing (66/80) 
+2025-07-02 19:48:35,956 24608 DEBUG ? odoo.modules.loading: Module test_mass_mailing loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,956 24608 DEBUG ? odoo.modules.loading: Loading module website_mass_mailing_sms (67/80) 
+2025-07-02 19:48:35,957 24608 DEBUG ? odoo.modules.loading: Module website_mass_mailing_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,957 24608 DEBUG ? odoo.modules.loading: Loading module website_payment (68/80) 
+2025-07-02 19:48:35,960 24608 DEBUG ? odoo.modules.loading: Module website_payment loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,960 24608 DEBUG ? odoo.modules.loading: Loading module delivery (69/80) 
+2025-07-02 19:48:35,966 24608 DEBUG ? odoo.modules.loading: Module delivery loaded in 0.01s, 0 queries 
+2025-07-02 19:48:35,966 24608 DEBUG ? odoo.modules.loading: Loading module mass_mailing_sale (70/80) 
+2025-07-02 19:48:35,967 24608 DEBUG ? odoo.modules.loading: Module mass_mailing_sale loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,967 24608 DEBUG ? odoo.modules.loading: Loading module sale_async_emails (71/80) 
+2025-07-02 19:48:35,968 24608 DEBUG ? odoo.modules.loading: Module sale_async_emails loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,968 24608 DEBUG ? odoo.modules.loading: Loading module sale_edi_ubl (72/80) 
+2025-07-02 19:48:35,970 24608 DEBUG ? odoo.modules.loading: Module sale_edi_ubl loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,970 24608 DEBUG ? odoo.modules.loading: Loading module sale_sms (73/80) 
+2025-07-02 19:48:35,971 24608 DEBUG ? odoo.modules.loading: Module sale_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,971 24608 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_sale (74/80) 
+2025-07-02 19:48:35,971 24608 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,971 24608 DEBUG ? odoo.modules.loading: Loading module test_mail_full (75/80) 
+2025-07-02 19:48:35,975 24608 DEBUG ? odoo.modules.loading: Module test_mail_full loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,975 24608 DEBUG ? odoo.modules.loading: Loading module mass_mailing_sale_sms (76/80) 
+2025-07-02 19:48:35,975 24608 DEBUG ? odoo.modules.loading: Module mass_mailing_sale_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,975 24608 DEBUG ? odoo.modules.loading: Loading module website_sale (77/80) 
+2025-07-02 19:48:35,992 24608 DEBUG ? odoo.modules.loading: Module website_sale loaded in 0.02s, 0 queries 
+2025-07-02 19:48:35,992 24608 DEBUG ? odoo.modules.loading: Loading module spreadsheet_dashboard_website_sale (78/80) 
+2025-07-02 19:48:35,993 24608 DEBUG ? odoo.modules.loading: Module spreadsheet_dashboard_website_sale loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,993 24608 DEBUG ? odoo.modules.loading: Loading module website_sale_autocomplete (79/80) 
+2025-07-02 19:48:35,995 24608 DEBUG ? odoo.modules.loading: Module website_sale_autocomplete loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,995 24608 DEBUG ? odoo.modules.loading: Loading module website_sale_mass_mailing (80/80) 
+2025-07-02 19:48:35,996 24608 DEBUG ? odoo.modules.loading: Module website_sale_mass_mailing loaded in 0.00s, 0 queries 
+2025-07-02 19:48:35,996 24608 INFO ? odoo.modules.loading: 80 modules loaded in 0.72s, 0 queries (+0 extra) 
+2025-07-02 19:48:36,180 24608 ERROR ? odoo.modules.loading: Some modules have inconsistent states, some dependencies may be missing: ['permission_request'] 
+2025-07-02 19:48:36,180 24608 INFO ? odoo.modules.loading: Modules loaded. 
+2025-07-02 19:48:36,187 24608 INFO ? odoo.modules.registry: Registry loaded in 1.003s 
+2025-07-02 19:48:36,192 24608 INFO odoo_test_access odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2025-07-02 19:48:36,192 24608 DEBUG odoo_test_access odoo.addons.website.models.ir_http: _generate_routing_rules for website: 1 
+2025-07-02 19:48:36,754 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:36] "GET /odoo/apps/641/ir.module.module/641/action-42 HTTP/1.1" 200 - 127 0.152 1.803
+2025-07-02 19:48:37,078 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/assets/debug/web.assets_web.css HTTP/1.1" 304 - 21 0.010 0.276
+2025-07-02 19:48:37,089 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/assets/debug/web.assets_web.js HTTP/1.1" 304 - 21 0.012 0.283
+2025-07-02 19:48:37,104 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/assets/debug/web.assets_tests.js HTTP/1.1" 304 - 4 0.004 0.013
+2025-07-02 19:48:37,263 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/assets/debug/web.assets_web_print.css HTTP/1.1" 304 - 21 0.007 0.141
+2025-07-02 19:48:37,368 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/static/img/favicon.ico HTTP/1.1" 304 - 0 0.000 0.001
+2025-07-02 19:48:37,376 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 9 0.004 0.005
+2025-07-02 19:48:37,376 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /bus/websocket_worker_bundle?v=18.0-5 HTTP/1.1" 304 - 4 0.002 0.004
+2025-07-02 19:48:37,461 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 - 0 0.000 0.005
+2025-07-02 19:48:37,461 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 304 - 0 0.000 0.006
+2025-07-02 19:48:37,558 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "POST /web/action/load_breadcrumbs HTTP/1.1" 200 - 15 0.024 0.085
+2025-07-02 19:48:37,559 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 17 0.034 0.074
+2025-07-02 19:48:37,563 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /websocket?version=18.0-5 HTTP/1.1" 101 - 1 0.003 0.038
+2025-07-02 19:48:37,612 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "POST /web/action/load HTTP/1.1" 200 - 9 0.008 0.010
+2025-07-02 19:48:37,624 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "POST /mail/data HTTP/1.1" 200 - 48 0.039 0.108
+2025-07-02 19:48:37,658 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "POST /report/check_wkhtmltopdf HTTP/1.1" 200 - 1 0.000 0.003
+2025-07-02 19:48:37,668 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/static/img/spin.svg HTTP/1.1" 304 - 0 0.000 0.002
+2025-07-02 19:48:37,701 24608 DEBUG odoo_test_access odoo.addons.http_routing.models.ir_http: '/report/html/base.report_irmodulereference/641' (lang: 'en') no lang in url and default website, continue 
+2025-07-02 19:48:37,852 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /report/html/base.report_irmodulereference/641?context={"lang":"en_US","tz":"Africa/Nairobi","uid":2,"allowed_company_ids":[1]} HTTP/1.1" 200 - 60 0.041 0.116
+2025-07-02 19:48:37,895 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/assets/1/debug/web.report_assets_common.js HTTP/1.1" 304 - 4 0.003 0.005
+2025-07-02 19:48:37,896 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/assets/1/debug/web.report_assets_common.css HTTP/1.1" 304 - 6 0.005 0.005
+2025-07-02 19:48:37,911 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/static/fonts/lato/Lato-Bol-webfont.woff HTTP/1.1" 304 - 0 0.000 0.001
+2025-07-02 19:48:37,913 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:37] "GET /web/static/fonts/lato/Lato-Reg-webfont.woff HTTP/1.1" 304 - 0 0.000 0.001
+2025-07-02 19:48:37,992 24608 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2025-07-02 19:48:39,589 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:39] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.007
+2025-07-02 19:48:45,715 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:45] "POST /web/action/load HTTP/1.1" 200 - 11 0.009 0.019
+2025-07-02 19:48:45,730 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().get_views(options={'action_id': 39, 'embedded_action_id': False, 'embedded_parent_res_id': False, 'load_filters': True, 'toolbar': True}, views=[[False, 'kanban'], [False, 'list'], [False, 'form'], [95, 'search']]) 
+2025-07-02 19:48:45,841 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:45] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 51 0.040 0.075
+2025-07-02 19:48:45,874 24608 DEBUG odoo_test_access odoo.api: call ir.module.module(641,).web_read(specification={'icon_image': {}, 'write_date': {}, 'shortdesc': {}, 'summary': {}, 'author': {}, 'website': {}, 'category_id': {'fields': {'display_name': {}}}, 'name': {}, 'license': {}, 'installed_version': {}, 'demo': {}, 'application': {}, 'state': {}, 'dependencies_id': {'fields': {'name': {}, 'state': {}}, 'limit': 40, 'order': ''}, 'exclusion_ids': {'fields': {'name': {}, 'state': {}}, 'limit': 40, 'order': ''}, 'menus_by_module': {}, 'views_by_module': {}, 'reports_by_module': {}, 'description_html': {}, 'to_buy': {}, 'module_type': {}, 'has_iap': {}, 'display_name': {}}) 
+2025-07-02 19:48:45,944 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:45] "POST /web/dataset/call_kw/ir.module.module/web_read HTTP/1.1" 200 - 17 0.019 0.058
+2025-07-02 19:48:45,997 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:45] "GET /base/static/src/css/description.css HTTP/1.1" 304 - 0 0.000 0.002
+2025-07-02 19:48:50,276 24608 DEBUG odoo_test_access odoo.api: call ir.module.module(641,).button_immediate_upgrade() 
+2025-07-02 19:48:50,279 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:48:50,281 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:48:50,281 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:48:51,543 24608 WARNING odoo_test_access odoo.http: Cannot upgrade module “permission_request”. It is not installed. 
+2025-07-02 19:48:51,544 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:51] "POST /web/dataset/call_button/ir.module.module/button_immediate_upgrade HTTP/1.1" 200 - 1607 0.640 0.632
+2025-07-02 19:48:55,703 24608 DEBUG odoo_test_access odoo.api: call ir.module.module(641,).button_immediate_upgrade() 
+2025-07-02 19:48:55,708 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_upgrade on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:48:55,709 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.button_upgrade on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:48:55,710 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.update_list on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:48:56,961 24608 WARNING odoo_test_access odoo.http: Cannot upgrade module “permission_request”. It is not installed. 
+2025-07-02 19:48:56,962 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:48:56] "POST /web/dataset/call_button/ir.module.module/button_immediate_upgrade HTTP/1.1" 200 - 1604 0.659 0.618
+2025-07-02 19:49:18,506 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:49:20,535 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:49:20,897 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:20] "POST /web/action/load HTTP/1.1" 200 - 8 0.008 0.026
+2025-07-02 19:49:20,921 24608 DEBUG odoo_test_access odoo.addons.http_routing.models.ir_http: '/report/html/base.report_irmodulereference/641' (lang: 'en') no lang in url and default website, continue 
+2025-07-02 19:49:20,952 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:20] "GET /report/html/base.report_irmodulereference/641?context={"lang":"en_US","tz":"Africa/Nairobi","uid":2,"allowed_company_ids":[1]} HTTP/1.1" 200 - 12 0.008 0.027
+2025-07-02 19:49:20,976 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:20] "GET /web/assets/1/debug/web.report_assets_common.js HTTP/1.1" 304 - 4 0.004 0.009
+2025-07-02 19:49:20,977 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:20] "GET /web/assets/1/debug/web.report_assets_common.css HTTP/1.1" 304 - 6 0.004 0.010
+2025-07-02 19:49:20,996 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:20] "GET /web/static/fonts/lato/Lato-Bol-webfont.woff HTTP/1.1" 304 - 0 0.000 0.003
+2025-07-02 19:49:20,996 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:20] "GET /web/static/fonts/lato/Lato-Reg-webfont.woff HTTP/1.1" 304 - 0 0.000 0.002
+2025-07-02 19:49:58,684 24608 DEBUG odoo_test_access odoo.api: call ir.module.module(641,).web_read(specification={'icon_image': {}, 'write_date': {}, 'shortdesc': {}, 'summary': {}, 'author': {}, 'website': {}, 'category_id': {'fields': {'display_name': {}}}, 'name': {}, 'license': {}, 'installed_version': {}, 'demo': {}, 'application': {}, 'state': {}, 'dependencies_id': {'fields': {'name': {}, 'state': {}}, 'limit': 40, 'order': ''}, 'exclusion_ids': {'fields': {'name': {}, 'state': {}}, 'limit': 40, 'order': ''}, 'menus_by_module': {}, 'views_by_module': {}, 'reports_by_module': {}, 'description_html': {}, 'to_buy': {}, 'module_type': {}, 'has_iap': {}, 'display_name': {}}) 
+2025-07-02 19:49:58,718 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:58] "POST /web/dataset/call_kw/ir.module.module/web_read HTTP/1.1" 200 - 14 0.010 0.042
+2025-07-02 19:49:58,730 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:49:58] "GET /base/static/src/css/description.css HTTP/1.1" 304 - 0 0.000 0.002
+2025-07-02 19:50:00,813 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('module_type', category_domain=[], enable_counters=False, expand=True, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:50:00,815 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('category_id', category_domain=[], enable_counters=True, expand=False, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:50:00,816 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:00] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 1 0.001 0.007
+2025-07-02 19:50:00,820 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().web_search_read(count_limit=10001, domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]], limit=80, offset=0, order='', specification={'to_buy': {}, 'name': {}, 'state': {}, 'summary': {}, 'website': {}, 'application': {}, 'module_type': {}, 'icon': {}, 'icon_flag': {}, 'shortdesc': {}}) 
+2025-07-02 19:50:00,840 24608 DEBUG odoo_test_access odoo.modules.module: module mrp_workorder: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,847 24608 DEBUG odoo_test_access odoo.modules.module: module accountant: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,851 24608 DEBUG odoo_test_access odoo.modules.module: module knowledge: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,859 24608 DEBUG odoo_test_access odoo.modules.module: module timesheet_grid: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,861 24608 DEBUG odoo_test_access odoo.modules.module: module web_studio: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,864 24608 DEBUG odoo_test_access odoo.modules.module: module industry_fsm: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,865 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:00] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 50 0.032 0.025
+2025-07-02 19:50:00,867 24608 DEBUG odoo_test_access odoo.modules.module: module sign: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,867 24608 DEBUG odoo_test_access odoo.modules.module: module helpdesk: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,868 24608 DEBUG odoo_test_access odoo.modules.module: module sale_subscription: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,869 24608 DEBUG odoo_test_access odoo.modules.module: module quality_control: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,871 24608 DEBUG odoo_test_access odoo.modules.module: module planning: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,873 24608 DEBUG odoo_test_access odoo.modules.module: module mrp_plm: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,874 24608 DEBUG odoo_test_access odoo.modules.module: module social: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,874 24608 DEBUG odoo_test_access odoo.modules.module: module hr_appraisal: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,875 24608 DEBUG odoo_test_access odoo.modules.module: module marketing_automation: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,876 24608 DEBUG odoo_test_access odoo.modules.module: module appointment: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,876 24608 DEBUG odoo_test_access odoo.modules.module: module web_mobile: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,878 24608 DEBUG odoo_test_access odoo.modules.module: module stock_barcode: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,879 24608 DEBUG odoo_test_access odoo.modules.module: module voip: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,880 24608 DEBUG odoo_test_access odoo.modules.module: module sale_amazon: no manifest file found ('__manifest__.py', '__openerp__.py') 
+2025-07-02 19:50:00,885 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:00] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.007 0.065
+2025-07-02 19:50:01,062 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:01] "GET /base/static/description/icon.png HTTP/1.1" 304 - 0 0.000 0.003
+2025-07-02 19:50:02,987 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:02] "GET /odoo/apps HTTP/1.1" 200 - 15 0.009 0.050
+2025-07-02 19:50:03,088 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/webclient/translations/94fc2481f5b07ca129e729fbb43e0fd1bf15cb2d?lang=en_US HTTP/1.1" 200 - 1 0.001 0.067
+2025-07-02 19:50:03,121 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/assets/debug/web.assets_web.css HTTP/1.1" 200 - 3 0.002 0.096
+2025-07-02 19:50:03,129 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/webclient/load_menus/0985cce5baa64e54f9ad40dd70f13d99a70e3c6d1ed882b5fa5211ffe3ab2046 HTTP/1.1" 200 - 170 0.054 0.058
+2025-07-02 19:50:03,142 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/assets/debug/web.assets_tests.js HTTP/1.1" 200 - 3 0.001 0.005
+2025-07-02 19:50:03,149 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/assets/debug/web.assets_web.js HTTP/1.1" 200 - 3 0.004 0.120
+2025-07-02 19:50:03,165 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/assets/debug/web.assets_web_print.css HTTP/1.1" 200 - 3 0.001 0.013
+2025-07-02 19:50:03,287 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/webclient/translations/94fc2481f5b07ca129e729fbb43e0fd1bf15cb2d?lang=en_US HTTP/1.1" 200 - 1 0.001 0.004
+2025-07-02 19:50:03,302 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.003
+2025-07-02 19:50:03,311 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 7 0.004 0.011
+2025-07-02 19:50:03,348 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /bus/websocket_worker_bundle?v=18.0-5 HTTP/1.1" 304 - 3 0.002 0.005
+2025-07-02 19:50:03,387 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 0 0.000 0.011
+2025-07-02 19:50:03,388 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 0 0.000 0.011
+2025-07-02 19:50:03,402 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 9 0.012 0.018
+2025-07-02 19:50:03,403 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "POST /web/action/load HTTP/1.1" 200 - 11 0.016 0.014
+2025-07-02 19:50:03,448 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "POST /mail/data HTTP/1.1" 200 - 29 0.041 0.024
+2025-07-02 19:50:03,492 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().get_views(options={'action_id': 39, 'embedded_action_id': False, 'embedded_parent_res_id': False, 'load_filters': True, 'toolbar': True}, views=[[False, 'kanban'], [False, 'list'], [False, 'form'], [95, 'search']]) 
+2025-07-02 19:50:03,498 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 2 0.001 0.007
+2025-07-02 19:50:03,543 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('module_type', category_domain=[], enable_counters=False, expand=True, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:50:03,546 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('category_id', category_domain=[], enable_counters=True, expand=False, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:50:03,546 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 1 0.001 0.009
+2025-07-02 19:50:03,547 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().web_search_read(count_limit=10001, domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]], limit=80, offset=0, order='', specification={'to_buy': {}, 'name': {}, 'state': {}, 'summary': {}, 'website': {}, 'application': {}, 'module_type': {}, 'icon': {}, 'icon_flag': {}, 'shortdesc': {}}) 
+2025-07-02 19:50:03,550 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /websocket?version=18.0-5 HTTP/1.1" 101 - 1 0.003 0.008
+2025-07-02 19:50:03,572 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.003 0.031
+2025-07-02 19:50:03,612 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 50 0.046 0.030
+2025-07-02 19:50:03,701 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:03] "GET /base/static/description/icon.png HTTP/1.1" 304 - 0 0.000 0.002
+2025-07-02 19:50:05,189 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().web_search_read(count_limit=10001, domain=['&', '!', ['name', '=like', 'theme_%'], '&', ['application', '=', True], ['category_id', 'child_of', 75]], limit=80, offset=0, order='', specification={'to_buy': {}, 'name': {}, 'state': {}, 'summary': {}, 'website': {}, 'application': {}, 'module_type': {}, 'icon': {}, 'icon_flag': {}, 'shortdesc': {}}) 
+2025-07-02 19:50:05,191 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('category_id', category_domain=[], enable_counters=True, expand=False, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:50:05,206 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:05] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 5 0.004 0.025
+2025-07-02 19:50:05,231 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:50:05] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 50 0.024 0.029
+2025-07-02 19:50:18,524 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:50:21,555 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:51:12,052 24608 DEBUG odoo_test_access odoo.api: call ir.module.module(641,).button_install_cancel() 
+2025-07-02 19:51:12,058 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.button_install_cancel on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:51:12,073 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:12] "POST /web/dataset/call_button/ir.module.module/button_install_cancel HTTP/1.1" 200 - 6 0.010 0.030
+2025-07-02 19:51:12,081 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().web_search_read(count_limit=10001, domain=['&', '!', ['name', '=like', 'theme_%'], '&', ['application', '=', True], ['category_id', 'child_of', 75]], limit=80, offset=0, order='', specification={'to_buy': {}, 'name': {}, 'state': {}, 'summary': {}, 'website': {}, 'application': {}, 'module_type': {}, 'icon': {}, 'icon_flag': {}, 'shortdesc': {}}) 
+2025-07-02 19:51:12,091 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:12] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 5 0.003 0.011
+2025-07-02 19:51:14,167 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /odoo/apps HTTP/1.1" 200 - 15 0.009 0.061
+2025-07-02 19:51:14,276 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/assets/debug/web.assets_web.css HTTP/1.1" 304 - 3 0.004 0.084
+2025-07-02 19:51:14,276 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/assets/debug/web.assets_web.js HTTP/1.1" 304 - 3 0.007 0.080
+2025-07-02 19:51:14,309 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/assets/debug/web.assets_tests.js HTTP/1.1" 304 - 3 0.002 0.007
+2025-07-02 19:51:14,344 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/assets/debug/web.assets_web_print.css HTTP/1.1" 304 - 3 0.002 0.013
+2025-07-02 19:51:14,591 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/static/img/favicon.ico HTTP/1.1" 304 - 0 0.000 0.003
+2025-07-02 19:51:14,600 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /bus/websocket_worker_bundle?v=18.0-5 HTTP/1.1" 304 - 3 0.004 0.007
+2025-07-02 19:51:14,602 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/manifest.webmanifest HTTP/1.1" 200 - 7 0.006 0.008
+2025-07-02 19:51:14,673 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 304 - 0 0.000 0.030
+2025-07-02 19:51:14,698 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 304 - 0 0.000 0.050
+2025-07-02 19:51:14,710 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "POST /web/action/load HTTP/1.1" 200 - 11 0.051 0.022
+2025-07-02 19:51:14,712 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /websocket?version=18.0-5 HTTP/1.1" 101 - 1 0.001 0.029
+2025-07-02 19:51:14,713 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 304 - 9 0.025 0.049
+2025-07-02 19:51:14,733 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "POST /mail/data HTTP/1.1" 200 - 29 0.018 0.050
+2025-07-02 19:51:14,794 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().get_views(options={'action_id': 39, 'embedded_action_id': False, 'embedded_parent_res_id': False, 'load_filters': True, 'toolbar': True}, views=[[False, 'kanban'], [False, 'list'], [False, 'form'], [95, 'search']]) 
+2025-07-02 19:51:14,804 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "POST /web/dataset/call_kw/ir.module.module/get_views HTTP/1.1" 200 - 2 0.001 0.013
+2025-07-02 19:51:14,831 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('module_type', category_domain=[], enable_counters=False, expand=True, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:51:14,832 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('category_id', category_domain=[], enable_counters=True, expand=False, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:51:14,833 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 1 0.001 0.006
+2025-07-02 19:51:14,834 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().web_search_read(count_limit=10001, domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]], limit=80, offset=0, order='', specification={'to_buy': {}, 'name': {}, 'state': {}, 'summary': {}, 'website': {}, 'application': {}, 'module_type': {}, 'icon': {}, 'icon_flag': {}, 'shortdesc': {}}) 
+2025-07-02 19:51:14,869 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 50 0.021 0.021
+2025-07-02 19:51:14,897 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:14] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 3 0.004 0.065
+2025-07-02 19:51:15,070 24608 INFO ? werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:15] "GET /base/static/description/icon.png HTTP/1.1" 304 - 0 0.000 0.002
+2025-07-02 19:51:16,675 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:16] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.001 0.005
+2025-07-02 19:51:16,923 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().web_search_read(count_limit=10001, domain=['&', '!', ['name', '=like', 'theme_%'], '&', ['application', '=', True], ['category_id', 'child_of', 75]], limit=80, offset=0, order='', specification={'to_buy': {}, 'name': {}, 'state': {}, 'summary': {}, 'website': {}, 'application': {}, 'module_type': {}, 'icon': {}, 'icon_flag': {}, 'shortdesc': {}}) 
+2025-07-02 19:51:16,924 24608 DEBUG odoo_test_access odoo.api: call ir.module.module().search_panel_select_range('category_id', category_domain=[], enable_counters=True, expand=False, filter_domain=[], hierarchize=True, limit=200, search_domain=['&', '!', ['name', '=like', 'theme_%'], ['application', '=', True]]) 
+2025-07-02 19:51:16,933 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:16] "POST /web/dataset/call_kw/ir.module.module/web_search_read HTTP/1.1" 200 - 5 0.003 0.013
+2025-07-02 19:51:16,961 24608 INFO odoo_test_access werkzeug: 127.0.0.1 - - [02/Jul/2025 19:51:16] "POST /web/dataset/call_kw/ir.module.module/search_panel_select_range HTTP/1.1" 200 - 50 0.020 0.024
+2025-07-02 19:51:18,541 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:51:22,576 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:52:12,642 24608 DEBUG odoo_test_access odoo.api: call ir.module.module(641,).button_immediate_install() 
+2025-07-02 19:52:12,649 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.button_immediate_install on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:52:12,650 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: User #2 triggered module installation 
+2025-07-02 19:52:12,654 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Permission Request'] to user jellytail662@gmail.com #2 via 127.0.0.1 
+2025-07-02 19:52:12,755 24608 DEBUG odoo_test_access odoo.modules.registry: Multiprocess load registry signaling: [Registry: 14] [Cache default: 9] [Cache assets: 7] [Cache templates: 7] [Cache routing: 1] [Cache groups: 7] 
+2025-07-02 19:52:12,778 24608 INFO odoo_test_access odoo.modules.loading: loading 1 modules... 
+2025-07-02 19:52:12,779 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module base (1/1) 
+2025-07-02 19:52:12,796 24608 DEBUG odoo_test_access odoo.modules.loading: Module base loaded in 0.02s, 0 queries 
+2025-07-02 19:52:12,796 24608 INFO odoo_test_access odoo.modules.loading: 1 modules loaded in 0.02s, 0 queries (+0 extra) 
+2025-07-02 19:52:12,827 24608 INFO odoo_test_access odoo.modules.loading: updating modules list 
+2025-07-02 19:52:12,828 24608 INFO odoo_test_access odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via 127.0.0.1 
+2025-07-02 19:52:13,754 24608 DEBUG odoo_test_access odoo.modules.loading: Updating graph with 79 more modules 
+2025-07-02 19:52:13,754 24608 INFO odoo_test_access odoo.modules.loading: loading 80 modules... 
+2025-07-02 19:52:13,755 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module social_media (2/80) 
+2025-07-02 19:52:13,756 24608 DEBUG odoo_test_access odoo.modules.loading: Module social_media loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,756 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module test_performance (3/80) 
+2025-07-02 19:52:13,757 24608 DEBUG odoo_test_access odoo.modules.loading: Module test_performance loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,758 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module uom (4/80) 
+2025-07-02 19:52:13,758 24608 DEBUG odoo_test_access odoo.modules.loading: Module uom loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,758 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module web (5/80) 
+2025-07-02 19:52:13,762 24608 DEBUG odoo_test_access odoo.modules.loading: Module web loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,763 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module auth_totp (6/80) 
+2025-07-02 19:52:13,763 24608 DEBUG odoo_test_access odoo.modules.loading: Module auth_totp loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,763 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module base_import (7/80) 
+2025-07-02 19:52:13,766 24608 DEBUG odoo_test_access odoo.modules.loading: Module base_import loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,766 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module base_import_module (8/80) 
+2025-07-02 19:52:13,767 24608 DEBUG odoo_test_access odoo.modules.loading: Module base_import_module loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,767 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module base_setup (9/80) 
+2025-07-02 19:52:13,767 24608 DEBUG odoo_test_access odoo.modules.loading: Module base_setup loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,767 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module bus (10/80) 
+2025-07-02 19:52:13,768 24608 DEBUG odoo_test_access odoo.modules.loading: Module bus loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,768 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module http_routing (11/80) 
+2025-07-02 19:52:13,768 24608 DEBUG odoo_test_access odoo.modules.loading: Module http_routing loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,768 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module onboarding (12/80) 
+2025-07-02 19:52:13,769 24608 DEBUG odoo_test_access odoo.modules.loading: Module onboarding loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,769 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module resource (13/80) 
+2025-07-02 19:52:13,770 24608 DEBUG odoo_test_access odoo.modules.loading: Module resource loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,770 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module utm (14/80) 
+2025-07-02 19:52:13,771 24608 DEBUG odoo_test_access odoo.modules.loading: Module utm loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,771 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module web_tour (15/80) 
+2025-07-02 19:52:13,772 24608 DEBUG odoo_test_access odoo.modules.loading: Module web_tour loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,772 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module google_recaptcha (16/80) 
+2025-07-02 19:52:13,773 24608 DEBUG odoo_test_access odoo.modules.loading: Module google_recaptcha loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,773 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module html_editor (17/80) 
+2025-07-02 19:52:13,773 24608 DEBUG odoo_test_access odoo.modules.loading: Module html_editor loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,773 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module iap (18/80) 
+2025-07-02 19:52:13,773 24608 DEBUG odoo_test_access odoo.modules.loading: Module iap loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,774 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mail (19/80) 
+2025-07-02 19:52:13,784 24608 DEBUG odoo_test_access odoo.modules.loading: Module mail loaded in 0.01s, 0 queries 
+2025-07-02 19:52:13,784 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module web_editor (20/80) 
+2025-07-02 19:52:13,790 24608 DEBUG odoo_test_access odoo.modules.loading: Module web_editor loaded in 0.01s, 0 queries 
+2025-07-02 19:52:13,790 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module analytic (21/80) 
+2025-07-02 19:52:13,791 24608 DEBUG odoo_test_access odoo.modules.loading: Module analytic loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,791 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module auth_signup (22/80) 
+2025-07-02 19:52:13,791 24608 DEBUG odoo_test_access odoo.modules.loading: Module auth_signup loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,791 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module auth_totp_mail (23/80) 
+2025-07-02 19:52:13,792 24608 DEBUG odoo_test_access odoo.modules.loading: Module auth_totp_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,792 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module base_install_request (24/80) 
+2025-07-02 19:52:13,792 24608 DEBUG odoo_test_access odoo.modules.loading: Module base_install_request loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,792 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module contacts (25/80) 
+2025-07-02 19:52:13,792 24608 DEBUG odoo_test_access odoo.modules.loading: Module contacts loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,792 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module google_gmail (26/80) 
+2025-07-02 19:52:13,793 24608 DEBUG odoo_test_access odoo.modules.loading: Module google_gmail loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,793 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module iap_mail (27/80) 
+2025-07-02 19:52:13,793 24608 DEBUG odoo_test_access odoo.modules.loading: Module iap_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,793 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module link_tracker (28/80) 
+2025-07-02 19:52:13,793 24608 DEBUG odoo_test_access odoo.modules.loading: Module link_tracker loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,793 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mail_bot (29/80) 
+2025-07-02 19:52:13,794 24608 DEBUG odoo_test_access odoo.modules.loading: Module mail_bot loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,794 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module phone_validation (30/80) 
+2025-07-02 19:52:13,796 24608 DEBUG odoo_test_access odoo.modules.loading: Module phone_validation loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,797 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module privacy_lookup (31/80) 
+2025-07-02 19:52:13,797 24608 DEBUG odoo_test_access odoo.modules.loading: Module privacy_lookup loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,797 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module product (32/80) 
+2025-07-02 19:52:13,799 24608 DEBUG odoo_test_access odoo.modules.loading: Module product loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,799 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module rating (33/80) 
+2025-07-02 19:52:13,800 24608 DEBUG odoo_test_access odoo.modules.loading: Module rating loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,800 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module resource_mail (34/80) 
+2025-07-02 19:52:13,800 24608 DEBUG odoo_test_access odoo.modules.loading: Module resource_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,800 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module sales_team (35/80) 
+2025-07-02 19:52:13,801 24608 DEBUG odoo_test_access odoo.modules.loading: Module sales_team loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,801 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module test_mail (36/80) 
+2025-07-02 19:52:13,803 24608 DEBUG odoo_test_access odoo.modules.loading: Module test_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,803 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module web_unsplash (37/80) 
+2025-07-02 19:52:13,803 24608 DEBUG odoo_test_access odoo.modules.loading: Module web_unsplash loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,803 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mail_plugin (38/80) 
+2025-07-02 19:52:13,804 24608 DEBUG odoo_test_access odoo.modules.loading: Module mail_plugin loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,804 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module partner_autocomplete (39/80) 
+2025-07-02 19:52:13,804 24608 DEBUG odoo_test_access odoo.modules.loading: Module partner_autocomplete loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,804 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module portal (40/80) 
+2025-07-02 19:52:13,805 24608 DEBUG odoo_test_access odoo.modules.loading: Module portal loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,805 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module sms (41/80) 
+2025-07-02 19:52:13,809 24608 DEBUG odoo_test_access odoo.modules.loading: Module sms loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,809 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module snailmail (42/80) 
+2025-07-02 19:52:13,810 24608 DEBUG odoo_test_access odoo.modules.loading: Module snailmail loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,810 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module auth_totp_portal (43/80) 
+2025-07-02 19:52:13,810 24608 DEBUG odoo_test_access odoo.modules.loading: Module auth_totp_portal loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,810 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module digest (44/80) 
+2025-07-02 19:52:13,811 24608 DEBUG odoo_test_access odoo.modules.loading: Module digest loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,811 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module payment (45/80) 
+2025-07-02 19:52:13,812 24608 DEBUG odoo_test_access odoo.modules.loading: Module payment loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,812 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module portal_rating (46/80) 
+2025-07-02 19:52:13,812 24608 DEBUG odoo_test_access odoo.modules.loading: Module portal_rating loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,812 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module spreadsheet (47/80) 
+2025-07-02 19:52:13,812 24608 DEBUG odoo_test_access odoo.modules.loading: Module spreadsheet loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,812 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module test_mail_sms (48/80) 
+2025-07-02 19:52:13,813 24608 DEBUG odoo_test_access odoo.modules.loading: Module test_mail_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,813 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module account (49/80) 
+2025-07-02 19:52:13,915 24608 DEBUG odoo_test_access odoo.modules.loading: Module account loaded in 0.10s, 0 queries 
+2025-07-02 19:52:13,916 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mass_mailing (50/80) 
+2025-07-02 19:52:13,917 24608 DEBUG odoo_test_access odoo.modules.loading: Module mass_mailing loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,917 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module spreadsheet_dashboard (51/80) 
+2025-07-02 19:52:13,918 24608 DEBUG odoo_test_access odoo.modules.loading: Module spreadsheet_dashboard loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,918 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website (52/80) 
+2025-07-02 19:52:13,924 24608 DEBUG odoo_test_access odoo.modules.loading: Module website loaded in 0.01s, 0 queries 
+2025-07-02 19:52:13,924 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module account_edi_ubl_cii (53/80) 
+2025-07-02 19:52:13,925 24608 DEBUG odoo_test_access odoo.modules.loading: Module account_edi_ubl_cii loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,925 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module account_payment (54/80) 
+2025-07-02 19:52:13,925 24608 DEBUG odoo_test_access odoo.modules.loading: Module account_payment loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,925 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module l10n_ke (55/80) 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Module l10n_ke loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mass_mailing_sms (56/80) 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Module mass_mailing_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mass_mailing_themes (57/80) 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Module mass_mailing_themes loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module snailmail_account (58/80) 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Module snailmail_account loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,926 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module spreadsheet_account (59/80) 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Module spreadsheet_account loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module spreadsheet_dashboard_account (60/80) 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Module spreadsheet_dashboard_account loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_links (61/80) 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_links loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_mail (62/80) 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_mail loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_mass_mailing (63/80) 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_mass_mailing loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_sms (64/80) 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,927 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module sale (65/80) 
+2025-07-02 19:52:13,928 24608 DEBUG odoo_test_access odoo.modules.loading: Module sale loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,928 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module test_mass_mailing (66/80) 
+2025-07-02 19:52:13,929 24608 DEBUG odoo_test_access odoo.modules.loading: Module test_mass_mailing loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,929 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_mass_mailing_sms (67/80) 
+2025-07-02 19:52:13,929 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_mass_mailing_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,929 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_payment (68/80) 
+2025-07-02 19:52:13,929 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_payment loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,929 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module delivery (69/80) 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Module delivery loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mass_mailing_sale (70/80) 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Module mass_mailing_sale loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module sale_async_emails (71/80) 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Module sale_async_emails loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module sale_edi_ubl (72/80) 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Module sale_edi_ubl loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module sale_sms (73/80) 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Module sale_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,930 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module spreadsheet_dashboard_sale (74/80) 
+2025-07-02 19:52:13,931 24608 DEBUG odoo_test_access odoo.modules.loading: Module spreadsheet_dashboard_sale loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,931 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module test_mail_full (75/80) 
+2025-07-02 19:52:13,931 24608 DEBUG odoo_test_access odoo.modules.loading: Module test_mail_full loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,931 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module mass_mailing_sale_sms (76/80) 
+2025-07-02 19:52:13,931 24608 DEBUG odoo_test_access odoo.modules.loading: Module mass_mailing_sale_sms loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,931 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_sale (77/80) 
+2025-07-02 19:52:13,932 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_sale loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,932 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module spreadsheet_dashboard_website_sale (78/80) 
+2025-07-02 19:52:13,932 24608 DEBUG odoo_test_access odoo.modules.loading: Module spreadsheet_dashboard_website_sale loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,932 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_sale_autocomplete (79/80) 
+2025-07-02 19:52:13,932 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_sale_autocomplete loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,932 24608 DEBUG odoo_test_access odoo.modules.loading: Loading module website_sale_mass_mailing (80/80) 
+2025-07-02 19:52:13,933 24608 DEBUG odoo_test_access odoo.modules.loading: Module website_sale_mass_mailing loaded in 0.00s, 0 queries 
+2025-07-02 19:52:13,933 24608 INFO odoo_test_access odoo.modules.loading: 80 modules loaded in 0.18s, 0 queries (+0 extra) 
+2025-07-02 19:52:13,935 24608 DEBUG odoo_test_access odoo.modules.loading: Updating graph with 1 more modules 
+2025-07-02 19:52:13,935 24608 INFO odoo_test_access odoo.modules.loading: loading 81 modules... 
+2025-07-02 19:52:13,935 24608 INFO odoo_test_access odoo.modules.loading: Loading module permission_request (30/81) 
+2025-07-02 19:52:14,023 24608 DEBUG odoo_test_access odoo.models: Patching res.partner.bank.partner_country_name with translate=True 
+2025-07-02 19:52:14,023 24608 DEBUG odoo_test_access odoo.models: Patching res.config.settings.report_footer with translate=True 
+2025-07-02 19:52:14,024 24608 DEBUG odoo_test_access odoo.models: Patching res.config.settings.invoice_terms with translate=True 
+2025-07-02 19:52:14,024 24608 DEBUG odoo_test_access odoo.models: Patching res.config.settings.invoice_terms_html with translate=True 
+2025-07-02 19:52:14,024 24608 DEBUG odoo_test_access odoo.models: Patching res.config.settings.website_sale_contact_us_button_url with translate=True 
+2025-07-02 19:52:14,030 24608 DEBUG odoo_test_access odoo.models: Patching base.document.layout.report_header with translate=True 
+2025-07-02 19:52:14,030 24608 DEBUG odoo_test_access odoo.models: Patching base.document.layout.report_footer with translate=True 
+2025-07-02 19:52:14,030 24608 DEBUG odoo_test_access odoo.models: Patching base.document.layout.company_details with translate=True 
+2025-07-02 19:52:14,032 24608 DEBUG odoo_test_access odoo.models: Patching iap.account.description with translate=True 
+2025-07-02 19:52:14,039 24608 DEBUG odoo_test_access odoo.models: Patching product.template.uom_name with translate=True 
+2025-07-02 19:52:14,043 24608 DEBUG odoo_test_access odoo.models: Patching product.pricelist.item.product_uom with translate=True 
+2025-07-02 19:52:14,043 24608 DEBUG odoo_test_access odoo.models: Patching product.template.attribute.value.name with translate=True 
+2025-07-02 19:52:14,062 24608 DEBUG odoo_test_access odoo.models: Patching account.move.line.account_name with translate=True 
+2025-07-02 19:52:14,066 24608 DEBUG odoo_test_access odoo.models: Patching account.report.expression.report_line_name with translate=True 
+2025-07-02 19:52:14,069 24608 DEBUG odoo_test_access odoo.models: Patching spreadsheet.dashboard.share.name with translate=True 
+2025-07-02 19:52:14,077 24608 DEBUG odoo_test_access odoo.models: Patching delivery.carrier.website_description with translate=True 
+2025-07-02 19:52:14,080 24608 DEBUG odoo_test_access odoo.models: Patching website.sale.extra.field.label with translate=True 
+2025-07-02 19:52:14,123 24608 INFO odoo_test_access odoo.modules.registry: module permission_request: creating or updating database tables 
+2025-07-02 19:52:14,151 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request': created 
+2025-07-02 19:52:14,163 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request_reject_wizard': created 
+2025-07-02 19:52:17,747 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request': added foreign key 'user_id' references 'res_users'('id') ON DELETE restrict 
+2025-07-02 19:52:17,751 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request': added foreign key 'approver_id' references 'res_users'('id') ON DELETE set null 
+2025-07-02 19:52:17,753 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request': added foreign key 'create_uid' references 'res_users'('id') ON DELETE set null 
+2025-07-02 19:52:17,756 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request': added foreign key 'write_uid' references 'res_users'('id') ON DELETE set null 
+2025-07-02 19:52:17,758 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request_reject_wizard': added foreign key 'request_id' references 'access_request'('id') ON DELETE cascade 
+2025-07-02 19:52:17,760 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request_reject_wizard': added foreign key 'create_uid' references 'res_users'('id') ON DELETE set null 
+2025-07-02 19:52:17,762 24608 DEBUG odoo_test_access odoo.schema: Table 'access_request_reject_wizard': added foreign key 'write_uid' references 'res_users'('id') ON DELETE set null 
+2025-07-02 19:52:17,783 24608 INFO odoo_test_access odoo.modules.loading: loading permission_request/security/ir.model.access.csv 
+2025-07-02 19:52:17,800 24608 DEBUG odoo_test_access odoo.modules.registry: Invalidating default model caches from call_cache_clearing_methods /Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_model.py:2144 
+2025-07-02 19:52:18,551 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:52:23,597 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:53:18,557 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:53:24,615 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:54:18,504 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (125/120s) reached. 
+2025-07-02 19:54:18,563 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:54:19,518 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (126/120s) reached. 
+2025-07-02 19:54:20,521 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (127/120s) reached. 
+2025-07-02 19:54:21,527 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (128/120s) reached. 
+2025-07-02 19:54:22,532 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (129/120s) reached. 
+2025-07-02 19:54:23,536 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (130/120s) reached. 
+2025-07-02 19:54:24,542 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (131/120s) reached. 
+2025-07-02 19:54:25,546 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (132/120s) reached. 
+2025-07-02 19:54:25,630 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:54:26,553 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (133/120s) reached. 
+2025-07-02 19:54:27,559 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (134/120s) reached. 
+2025-07-02 19:54:28,566 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (135/120s) reached. 
+2025-07-02 19:54:29,569 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (136/120s) reached. 
+2025-07-02 19:54:30,575 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (137/120s) reached. 
+2025-07-02 19:54:31,582 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (138/120s) reached. 
+2025-07-02 19:54:32,588 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (139/120s) reached. 
+2025-07-02 19:54:33,591 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (140/120s) reached. 
+2025-07-02 19:54:34,598 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (141/120s) reached. 
+2025-07-02 19:54:35,604 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (142/120s) reached. 
+2025-07-02 19:54:36,610 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (143/120s) reached. 
+2025-07-02 19:54:37,613 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (144/120s) reached. 
+2025-07-02 19:54:38,616 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (145/120s) reached. 
+2025-07-02 19:54:39,621 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (146/120s) reached. 
+2025-07-02 19:54:40,623 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (147/120s) reached. 
+2025-07-02 19:54:41,629 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (149/120s) reached. 
+2025-07-02 19:54:42,635 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (150/120s) reached. 
+2025-07-02 19:54:43,638 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (151/120s) reached. 
+2025-07-02 19:54:44,641 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (152/120s) reached. 
+2025-07-02 19:54:45,642 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (153/120s) reached. 
+2025-07-02 19:54:46,644 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (154/120s) reached. 
+2025-07-02 19:54:47,650 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (155/120s) reached. 
+2025-07-02 19:54:48,652 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (156/120s) reached. 
+2025-07-02 19:54:49,658 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (157/120s) reached. 
+2025-07-02 19:54:50,664 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (158/120s) reached. 
+2025-07-02 19:54:51,670 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (159/120s) reached. 
+2025-07-02 19:54:52,672 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (160/120s) reached. 
+2025-07-02 19:54:53,678 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (161/120s) reached. 
+2025-07-02 19:54:54,685 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (162/120s) reached. 
+2025-07-02 19:54:55,690 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (163/120s) reached. 
+2025-07-02 19:54:56,696 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (164/120s) reached. 
+2025-07-02 19:54:57,702 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (165/120s) reached. 
+2025-07-02 19:54:58,708 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (166/120s) reached. 
+2025-07-02 19:54:59,714 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (167/120s) reached. 
+2025-07-02 19:55:00,719 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (168/120s) reached. 
+2025-07-02 19:55:01,726 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (169/120s) reached. 
+2025-07-02 19:55:02,732 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (170/120s) reached. 
+2025-07-02 19:55:03,738 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6172307456, started 6172307456)> virtual real time limit (171/120s) reached. 
+2025-07-02 19:55:03,739 24608 WARNING ? odoo.service.server: Thread <Thread(odoo.service.http.request.6189133824, started 6189133824)> virtual real time limit (120/120s) reached. 
+2025-07-02 19:55:03,739 24608 INFO ? odoo.service.server: Dumping stacktrace of limit exceeding threads before reloading 
+2025-07-02 19:55:03,782 24608 INFO ? odoo.tools.misc: 
+# Thread: <Thread(odoo.service.http.request.6189133824, started 6189133824)> (db:n/a) (uid:n/a) (url:http://localhost:8069/odoo/apps) (qc:0 qt:0.000 pt:120.212)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/threading.py", line 1032, in _bootstrap
+  self._bootstrap_inner()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+  self.run()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/threading.py", line 1012, in run
+  self._target(*self._args, **self._kwargs)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/socketserver.py", line 697, in process_request_thread
+  self.finish_request(request, client_address)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/socketserver.py", line 362, in finish_request
+  self.RequestHandlerClass(request, client_address, self)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/service/server.py", line 128, in __init__
+  super().__init__(*args, **kwargs)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/socketserver.py", line 766, in __init__
+  self.handle()
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/werkzeug/serving.py", line 390, in handle
+  super().handle()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/http/server.py", line 436, in handle
+  self.handle_one_request()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/http/server.py", line 424, in handle_one_request
+  method()
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+  execute(self.server.app)
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/werkzeug/serving.py", line 323, in execute
+  application_iter = app(environ, start_response)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 2532, in __call__
+  response = request._serve_db()
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 2036, in _serve_db
+  self.registry, cr_readwrite = self._open_registry()
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 1646, in _open_registry
+  registry = Registry(self.db)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/registry.py", line 104, in __new__
+  with cls._lock:
+
+# Thread: <Thread(odoo.service.http.request.6172307456, started 6172307456)> (db:odoo_test_access) (uid:2) (url:http://localhost:8069/web/dataset/call_button/ir.module.module/button_immediate_install) (qc:4903 qt:2.305 pt:168.833)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/threading.py", line 1032, in _bootstrap
+  self._bootstrap_inner()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/threading.py", line 1075, in _bootstrap_inner
+  self.run()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/threading.py", line 1012, in run
+  self._target(*self._args, **self._kwargs)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/socketserver.py", line 697, in process_request_thread
+  self.finish_request(request, client_address)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/socketserver.py", line 362, in finish_request
+  self.RequestHandlerClass(request, client_address, self)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/service/server.py", line 128, in __init__
+  super().__init__(*args, **kwargs)
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/socketserver.py", line 766, in __init__
+  self.handle()
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/werkzeug/serving.py", line 390, in handle
+  super().handle()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/http/server.py", line 436, in handle
+  self.handle_one_request()
+File: "/Users/lawrence/.pyenv/versions/3.12.11/lib/python3.12/http/server.py", line 424, in handle_one_request
+  method()
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/werkzeug/serving.py", line 362, in run_wsgi
+  execute(self.server.app)
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/werkzeug/serving.py", line 323, in execute
+  application_iter = app(environ, start_response)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 2532, in __call__
+  response = request._serve_db()
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 2059, in _serve_db
+  return self._transactioning(
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 2122, in _transactioning
+  return service_model.retrying(func, env=self.env)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/service/model.py", line 156, in retrying
+  result = func()
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 2089, in _serve_ir_http
+  response = self.dispatcher.dispatch(rule.endpoint, args)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 2337, in dispatch
+  result = self.request.registry['ir.http']._dispatch(endpoint)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_http.py", line 333, in _dispatch
+  result = endpoint(**request.params)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/http.py", line 754, in route_wrapper
+  result = endpoint(self, *args, **params_ok)
+File: "/Users/lawrence/Documents/odoo/odoo/addons/web/controllers/dataset.py", line 42, in call_button
+  action = call_kw(request.env[model], method, args, kwargs)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/api.py", line 533, in call_kw
+  result = getattr(recs, name)(*args, **kwargs)
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/decorator.py", line 232, in fun
+  return caller(func, *(extras + args), **kw)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_module.py", line 75, in check_and_log
+  return method(self, *args, **kwargs)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_module.py", line 480, in button_immediate_install
+  return self._button_immediate_function(self.env.registry[self._name].button_install)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_module.py", line 604, in _button_immediate_function
+  registry = modules.registry.Registry.new(self._cr.dbname, update_module=True)
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/decorator.py", line 232, in fun
+  return caller(func, *(extras + args), **kw)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/tools/func.py", line 97, in locked
+  return func(inst, *args, **kwargs)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/registry.py", line 129, in new
+  odoo.modules.load_modules(registry, force_demo, status, update_module)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/loading.py", line 484, in load_modules
+  processed_modules += load_marked_modules(env, graph,
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/loading.py", line 365, in load_marked_modules
+  loaded, processed = load_module_graph(
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/loading.py", line 228, in load_module_graph
+  load_data(env, idref, mode, kind='data', package=package)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/loading.py", line 72, in load_data
+  tools.convert_file(env, package.name, filename, idref, mode, noupdate, kind)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/tools/convert.py", line 611, in convert_file
+  convert_csv_import(env, module, pathname, fp.read(), idref, mode, noupdate)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/tools/convert.py", line 653, in convert_csv_import
+  result = env[model].with_context(**context).load(fields, datas)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/models.py", line 1434, in load
+  self.pool.reset_changes()
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/registry.py", line 944, in reset_changes
+  self.setup_models(cr)
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/decorator.py", line 232, in fun
+  return caller(func, *(extras + args), **kw)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/tools/func.py", line 97, in locked
+  return func(inst, *args, **kwargs)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/modules/registry.py", line 350, in setup_models
+  model._setup_base()
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/models.py", line 3659, in _setup_base
+  self.env['ir.model.fields']._add_manual_fields(self)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_model.py", line 1348, in _add_manual_fields
+  fields_data = self._get_manual_field_data(model._name)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_model.py", line 1266, in _get_manual_field_data
+  return self._all_manual_field_data().get(model_name, {})
+File: "/Users/lawrence/Documents/odoo/lib/python3.12/site-packages/decorator.py", line 232, in fun
+  return caller(func, *(extras + args), **kw)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/tools/cache.py", line 110, in lookup
+  value = d[key] = self.method(*args, **kwargs)
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/addons/base/models/ir_model.py", line 1254, in _all_manual_field_data
+  cr.execute("""
+File: "/Users/lawrence/Documents/odoo/odoo/odoo/sql_db.py", line 354, in execute
+  res = self._obj.execute(query, params) 
+2025-07-02 19:55:03,782 24608 INFO ? odoo.service.server: Initiating server reload 
+2025-07-02 19:55:03,849 24608 DEBUG ? odoo.service.server: on_close call <bound method Event.set of <threading.Event at 0x10cd32c00: unset>> 
+2025-07-02 19:55:03,854 24608 DEBUG ? odoo.service.server: on_close call <function _kick_all at 0x10cda4540> 
+2025-07-02 19:55:03,855 24608 DEBUG ? odoo.service.server: current thread: <_MainThread(MainThread, started 8583301184)> 
+2025-07-02 19:55:03,855 24608 DEBUG ? odoo.service.server: process <_MainThread(MainThread, started 8583301184)> (False) 
+2025-07-02 19:55:03,855 24608 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron0, started daemon 6121828352)> (True) 
+2025-07-02 19:55:03,855 24608 DEBUG ? odoo.service.server: process <Thread(odoo.service.cron.cron1, started daemon 6138654720)> (True) 
+2025-07-02 19:55:03,855 24608 DEBUG ? odoo.service.server: process <ImDispatch(odoo.addons.bus.models.bus.Bus, started daemon 6155481088)> (True) 
+2025-07-02 19:55:03,855 24608 DEBUG ? odoo.service.server: process <Thread(odoo.service.http.request.6256439296, started 6256439296)> (False) 
+2025-07-02 19:55:03,856 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:03,966 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,076 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,186 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,296 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,406 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,517 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,627 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,737 24608 DEBUG ? odoo.service.server: join and sleep 
+2025-07-02 19:55:04,843 24608 DEBUG ? odoo.service.server: process <Thread(odoo.service.http.request.6172307456, started 6172307456)> (False) 
+2025-07-02 19:55:04,843 24608 DEBUG ? odoo.service.server: process <Thread(odoo.service.http.request.6189133824, started 6189133824)> (False) 
+2025-07-02 19:55:18,566 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:55:26,644 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:56:18,576 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:56:27,662 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:57:18,585 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:57:28,677 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:58:18,594 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:58:29,697 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 19:59:18,616 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 19:59:30,714 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 20:00:05,439 24608 DEBUG ? odoo.service.server: cron1 polling for jobs 
+2025-07-02 20:00:05,435 24608 DEBUG ? odoo.service.server: cron0 polling for jobs 
+2025-07-02 20:00:05,449 24608 ERROR odoo_test_access odoo.sql_db: bad query: b"\n            SELECT *, field_description->>'en_US' AS field_description, help->>'en_US' AS help\n            FROM ir_model_fields\n            WHERE state = 'manual'\n        "
+ERROR: server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+ 

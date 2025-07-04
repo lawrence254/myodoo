@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Actions -->
+    <record id="action_access_request" model="ir.actions.act_window">
+        <field name="name">Access Requests</field>
+        <field name="res_model">access.request</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="context">{'search_default_pending': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No access requests found!
+            </p>
+            <p>
+                Access requests are created when users try to perform actions they don't have permission for.
+                Administrators can approve or reject these requests from here.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_my_access_requests" model="ir.actions.act_window">
+        <field name="name">My Access Requests</field>
+        <field name="res_model">access.request</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_my_requests': 1}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                You haven't made any access requests yet!
+            </p>
+            <p>
+                When you try to access something you don't have permission for, 
+                you can create an access request that will be sent to administrators for approval.
+            </p>
+        </field>
+    </record>
+
+    <record id="action_pending_access_requests" model="ir.actions.act_window">
+        <field name="name">Pending Approvals</field>
+        <field name="res_model">access.request</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('state', '=', 'submitted')]</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No pending access requests!
+            </p>
+            <p>
+                This view shows all access requests that are waiting for your approval.
+            </p>
+        </field>
+    </record>
+
+    <!-- Create New Access Request Action -->
+    <record id="action_create_access_request" model="ir.actions.act_window">
+        <field name="name">Request Access</field>
+        <field name="res_model">access.request</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="context">{'default_state': 'draft'}</field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_access_request_root" 
+              name="Access Requests" 
+              sequence="100" 
+              groups="group_access_request_user"/>
+
+    <!-- User Menus -->
+    <menuitem id="menu_my_access_requests" 
+              name="My Requests" 
+              parent="menu_access_request_root" 
+              action="action_my_access_requests" 
+              sequence="10"
+              groups="group_access_request_user"/>
+
+    <menuitem id="menu_create_access_request" 
+              name="Request Access" 
+              parent="menu_access_request_root" 
+              action="action_create_access_request" 
+              sequence="20"
+              groups="group_access_request_user"/>
+
+    <!-- Admin Menus -->
+    <menuitem id="menu_access_request_admin" 
+              name="Administration" 
+              parent="menu_access_request_root" 
+              sequence="50"
+              groups="group_access_request_admin"/>
+
+    <menuitem id="menu_pending_access_requests" 
+              name="Pending Approvals" 
+              parent="menu_access_request_admin" 
+              action="action_pending_access_requests" 
+              sequence="10"
+              groups="group_access_request_admin"/>
+
+    <menuitem id="menu_all_access_requests" 
+              name="All Requests" 
+              parent="menu_access_request_admin" 
+              action="action_access_request" 
+              sequence="20"
+              groups="group_access_request_admin"/>
+
+    <!-- Dashboard/Statistics Actions -->
+    <record id="action_access_request_dashboard" model="ir.actions.act_window">
+        <field name="name">Access Request Dashboard</field>
+        <field name="res_model">access.request</field>
+        <field name="view_mode">graph,pivot</field>
+        <field name="context">{
+            'search_default_this_month': 1,
+            'group_by': ['state', 'create_date:month']
+        }</field>
+    </record>
+
+    <menuitem id="menu_access_request_dashboard" 
+              name="Dashboard" 
+              parent="menu_access_request_admin" 
+              action="action_access_request_dashboard" 
+              sequence="30"
+              groups="group_access_request_admin"/>
+
+    <!-- Add to Settings menu for configuration -->
+    <menuitem id="menu_access_request_config" 
+              name="Access Request Settings" 
+              parent="base.menu_administration" 
+              sequence="100"
+              groups="base.group_system"/>
+
+    <menuitem id="menu_access_request_config_main" 
+              name="Access Requests" 
+              parent="menu_access_request_config" 
+              action="action_access_request" 
+              sequence="10"
+              groups="base.group_system"/>
+</odoo>

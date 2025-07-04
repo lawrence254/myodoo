@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Access Request Tree View -->
+    <record id="view_access_request_tree" model="ir.ui.view">
+        <field name="name">access.request.tree</field>
+        <field name="model">access.request</field>
+        <field name="arch" type="xml">
+            <tree string="Access Requests" decoration-success="state=='approved'" 
+                  decoration-danger="state=='rejected'" decoration-warning="state=='submitted'"
+                  decoration-muted="state=='expired'">
+                <field name="create_date"/>
+                <field name="user_id"/>
+                <field name="model_display_name"/>
+                <field name="action_type"/>
+                <field name="priority"/>
+                <field name="state"/>
+                <field name="approver_id"/>
+                <field name="access_expires_at" optional="hide"/>
+                <field name="is_expired" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Access Request Form View -->
+    <record id="view_access_request_form" model="ir.ui.view">
+        <field name="name">access.request.form</field>
+        <field name="model">access.request</field>
+        <field name="arch" type="xml">
+            <form string="Access Request">
+                <header>
+                    <button name="action_submit" string="Submit Request" type="object" 
+                            class="btn-primary" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                    <button name="action_approve" string="Approve" type="object" 
+                            class="btn-success" attrs="{'invisible': ['|', ('state', '!=', 'submitted'), ('can_approve', '=', False)]}"/>
+                    <button name="action_reject" string="Reject" type="object" 
+                            class="btn-danger" attrs="{'invisible': ['|', ('state', '!=', 'submitted'), ('can_approve', '=', False)]}"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,submitted,approved,rejected"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" type="object" name="toggle_active" icon="fa-archive" 
+                                attrs="{'invisible': [('state', 'not in', ['approved', 'rejected', 'expired'])]}">
+                            <field name="active" widget="boolean_button" options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    
+                    <div class="alert alert-warning" role="alert" 
+                         attrs="{'invisible': ['|', ('state', '!=', 'approved'), ('is_expired', '=', False)]}">
+                        <strong>Warning:</strong> This access has expired.
+                    </div>
+                    
+                    <group>
+                        <group>
+                            <field name="user_id" readonly="1"/>
+                            <field name="model_name" readonly="1"/>
+                            <field name="model_display_name" readonly="1"/>
+                            <field name="action_type" readonly="1"/>
+                            <field name="record_id" readonly="1" attrs="{'invisible': [('record_id', '=', False)]}"/>
+                            <field name="priority"/>
+                        </group>
+                        <group>
+                            <field name="create_date" readonly="1"/>
+                            <field name="approver_id" readonly="1" attrs="{'invisible': [('approver_id', '=', False)]}"/>
+                            <field name="approval_date" readonly="1" attrs="{'invisible': [('approval_date', '=', False)]}"/>
+                            <field name="can_approve" invisible="1"/>
+                            <field name="is_expired" invisible="1"/>
+                        </group>
+                    </group>
+                    
+                    <notebook>
+                        <page string="Request Details">
+                            <group>
+                                <field name="reason" widget="text"/>
+                                <field name="justification" widget="text" 
+                                       placeholder="Provide business justification for this access request..."/>
+                            </group>
+                        </page>
+                        
+                        <page string="Access Settings" attrs="{'invisible': [('state', 'not in', ['submitted', 'approved'])]}">
+                            <group>
+                                <field name="temporary_access"/>
+                                <field name="access_duration" attrs="{'invisible': [('temporary_access', '=', False)]}"/>
+                                <field name="access_expires_at" readonly="1" 
+                                       attrs="{'invisible': [('access_expires_at', '=', False)]}"/>
+                            </group>
+                        </page>
+                        
+                        <page string="Additional Information">
+                            <group>
+                                <field name="url" readonly="1" widget="url" attrs="{'invisible': [('url', '=', False)]}"/>
+                                <field name="menu_name" readonly="1" attrs="{'invisible': [('menu_name', '=', False)]}"/>
+                                <field name="error_message" readonly="1" widget="text" 
+                                       attrs="{'invisible': [('error_message', '=', False)]}"/>
+                            </group>
+                        </page>
+                        
+                        <page string="Approval/Rejection" attrs="{'invisible': [('state', 'not in', ['approved', 'rejected'])]}">
+                            <group>
+                                <field name="rejection_reason" widget="text" readonly="1" 
+                                       attrs="{'invisible': [('state', '!=', 'rejected')]}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Access Request Search View -->
+    <record id="view_access_request_search" model="ir.ui.view">
+        <field name="name">access.request.search</field>
+        <field name="model">access.request</field>
+        <field name="arch" type="xml">
+            <search string="Access Requests">
+                <field name="user_id"/>
+                <field name="model_name"/>
+                <field name="model_display_name"/>
+                <field name="action_type"/>
+                <field name="reason"/>
+                <field name="approver_id"/>
+                
+                <filter string="My Requests" name="my_requests" domain="[('user_id', '=', uid)]"/>
+                <filter string="Pending Approval" name="pending" domain="[('state', '=', 'submitted')]"/>
+                <filter string="Approved" name="approved" domain="[('state', '=', 'approved')]"/>
+                <filter string="Rejected" name="rejected" domain="[('state', '=', 'rejected')]"/>
+                <filter string="Expired" name="expired" domain="[('state', '=', 'expired')]"/>
+                <filter string="High Priority" name="high_priority" domain="[('priority', 'in', ['high', 'urgent'])]"/>
+                
+                <separator/>
+                <filter string="This Week" name="this_week" 
+                        domain="[('create_date', '>=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]"/>
+                <filter string="This Month" name="this_month" 
+                        domain="[('create_date', '>=', (context_today().replace(day=1)).strftime('%Y-%m-%d'))]"/>
+                
+                <group expand="0" string="Group By">
+                    <filter string="User" name="group_user" context="{'group_by': 'user_id'}"/>
+                    <filter string="Model" name="group_model" context="{'group_by': 'model_display_name'}"/>
+                    <filter string="Action Type" name="group_action" context="{'group_by': 'action_type'}"/>
+                    <filter string="Status" name="group_state" context="{'group_by': 'state'}"/>
+                    <filter string="Priority" name="group_priority" context="{'group_by': 'priority'}"/>
+                    <filter string="Approver" name="group_approver" context="{'group_by': 'approver_id'}"/>
+                    <filter string="Creation Date" name="group_create_date" context="{'group_by': 'create_date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Access Request Kanban View -->
+    <record id="view_access_request_kanban" model="ir.ui.view">
+        <field name="name">access.request.kanban</field>
+        <field name="model">access.request</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="state" class="o_kanban_small_column">
+                <field name="user_id"/>
+                <field name="model_display_name"/>
+                <field name="action_type"/>
+                <field name="priority"/>
+                <field name="state"/>
+                <field name="create_date"/>
+                <field name="can_approve"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card oe_kanban_global_click">
+                            <div class="o_kanban_content">
+                                <div class="o_kanban_record_title">
+                                    <field name="model_display_name"/>
+                                </div>
+                                <div class="o_kanban_record_subtitle">
+                                    <t t-esc="record.action_type.value.toUpperCase()"/> by <t t-esc="record.user_id.value"/>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <field name="reason" widget="text"/>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left">
+                                        <span class="badge" t-att-class="'badge-' + (record.priority.raw_value == 'urgent' ? 'danger' : (record.priority.raw_value == 'high' ? 'warning' : 'secondary'))">
+                                            <t t-esc="record.priority.value"/>
+                                        </span>
+                                    </div>
+                                    <div class="oe_kanban_bottom_right">
+                                        <t t-esc="record.create_date.value"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_dropdown_kanban dropdown" t-if="record.can_approve.raw_value and record.state.raw_value == 'submitted'">
+                                <a class="dropdown-toggle o-no-caret btn" data-toggle="dropdown" href="#" role="button" aria-label="Dropdown menu" title="Dropdown menu">
+                                    <span class="fa fa-ellipsis-v"/>
+                                </a>
+                                <div class="dropdown-menu" role="menu">
+                                    <a type="object" name="action_approve" class="dropdown-item">Approve</a>
+                                    <a type="object" name="action_reject" class="dropdown-item">Reject</a>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <!-- Rejection Wizard Form -->
+    <record id="view_access_request_reject_wizard_form" model="ir.ui.view">
+        <field name="name">access.request.reject.wizard.form</field>
+        <field name="model">access.request.reject.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Reject Access Request">
+                <group>
+                    <field name="request_id" invisible="1"/>
+                    <field name="rejection_reason" widget="text" placeholder="Please provide a reason for rejection..."/>
+                </group>
+                <footer>
+                    <button name="action_reject" string="Reject Request" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

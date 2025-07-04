@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_request_user,access.request.user,model_access_request,group_access_request_user,1,1,1,0
+access_request_admin,access.request.admin,model_access_request,group_access_request_admin,1,1,1,1
+access_request_reject_wizard_admin,access.request.reject.wizard.admin,model_access_request_reject_wizard,group_access_request_admin,1,1,1,1
+access_request_helper_user,access.request.helper.user,model_access_request_helper,group_access_request_user,1,0,0,0
+access_request_interceptor_user,base.model.access.interceptor.user,model_base_model_access_interceptor,group_access_request_user,1,0,0,0
